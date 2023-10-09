@@ -127,7 +127,7 @@ func read_conf() {
 		}
 
 		fmt.Println("配置文件已创建并成功写入基础数据,请在该程序目录下查看名为【go_conf.json的文件】并补充完数据后再重新运行")
-		return
+		os.Exit(0)
 	} else if err == nil {
 		file, err := os.ReadFile(filename)
 		if err != nil {
